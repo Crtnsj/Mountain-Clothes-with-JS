@@ -1,0 +1,142 @@
+.backloginbox {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-image: url(../img/backloginbox.png);
+  background-position: center bottom;
+  height: 50%;
+  border: 2px solid #273859;
+}
+
+.loginbox {
+  display: flex;
+  background-color: rgba(101, 146, 166, 0.8352941176);
+  flex-direction: column;
+  gap: 1.1rem;
+  border-radius: 0.5rem;
+  padding: 40px;
+  align-items: flex-start;
+  box-shadow: 3px -3px 5px #000000;
+  max-width: 45%;
+}
+.loginbox__titre {
+  display: flex;
+  margin: 0 0 30px;
+  color: #000000;
+  justify-content: center;
+  width: 100%;
+}
+.loginbox__bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.loginbox__input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.loginbox__label {
+  position: relative;
+  top: -30px;
+  pointer-events: none;
+}
+.loginbox__input:focus + .loginbox__label, .loginbox__input:valid + .loginbox__label {
+  transform: translateY(-15px);
+  transition: 0.25s;
+  color: #273859;
+  font-size: 0.75rem;
+}
+
+.btn_submit {
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 5px 10px 5px 10px;
+  margin-top: 10%;
+  font-size: 1.1rem;
+  background-color: transparent;
+  overflow: hidden;
+  border: 1px solid #273859;
+  letter-spacing: 0.25rem;
+}
+.btn_submit:hover {
+  background-color: #273859;
+  transition: 0.25s;
+  color: #c6d7de;
+}
+.btn_submit span {
+  position: relative;
+  display: block;
+}
+.btn_submit span:nth-child(1) {
+  top: 25%;
+  right: 111%;
+  width: 100%;
+  height: 2px;
+  animation: span1 4s ease-in infinite;
+  background: linear-gradient(90deg, transparent, #CEECF2);
+}
+.btn_submit span:nth-child(2) {
+  top: 25%;
+  right: -105%;
+  width: 2px;
+  height: 100%;
+  animation: span2 4s ease-in infinite;
+  animation-delay: 1s;
+  background: linear-gradient(360deg, transparent, #CEECF2);
+}
+.btn_submit span:nth-child(3) {
+  top: -208%;
+  right: -111%;
+  width: 100%;
+  height: 2px;
+  animation: span3 4s ease-in infinite;
+  animation-delay: 2s;
+  background: linear-gradient(270deg, transparent, #CEECF2);
+}
+.btn_submit span:nth-child(4) {
+  top: -315%;
+  right: 7%;
+  width: 2px;
+  height: 100%;
+  animation: span4 4s ease-in infinite;
+  animation-delay: 3s;
+  background: linear-gradient(180deg, transparent, #CEECF2);
+}
+
+@keyframes span1 {
+  0% {
+    right: 111%;
+  }
+  50%, 100% {
+    right: -108%;
+  }
+}
+@keyframes span2 {
+  0% {
+    top: 30%;
+  }
+  50%, 100% {
+    top: -200%;
+  }
+}
+@keyframes span3 {
+  0% {
+    right: -117%;
+  }
+  50%, 100% {
+    right: 111%;
+  }
+}
+@keyframes span4 {
+  0% {
+    top: -315%;
+  }
+  50%, 100% {
+    top: -100%;
+  }
+}
+
+

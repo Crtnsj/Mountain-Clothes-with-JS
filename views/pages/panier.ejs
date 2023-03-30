@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Clothes</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+</head>   
+    <body>
+        <header>
+            <h1>
+                Mountain Clothes
+            </h1>
+            <nav class="nav">
+                <img src="images/menuhamb.png" class="nav__menuhamb">   
+                <a href="/" class="nav__logo nav__logo--marque"></a>
+                <h2 class="nav__menuhamb">Bienvenue !</h2>
+                    <ul class="nav__ul">
+                        <li class="navlink"><a href="/">Accueil</a></li>
+                        <li class="navlink"><a href="html/Hommes.html">Hommes</a></li>
+                        <li class="navlink"><a href="html/Femmes.html">Femmes</a></li>
+                        <li class="navlink"><a href="html/Nouveautés.html">Nouveautés</a></li>
+                        <li class="navlink"><a href="html/Notre_esprit.html">Notre esprit</a></li>
+                    </ul>
+            <a href="/html/Connexion.js" class="nav__logo nav__logo--connexion"></a>
+            </nav>
+        </header>
+        <main>
+            <ul class="articles">
+                <% for (let i = 0; i<panier.length; i++) {%>
+                <li class="card">
+                    <img src="../img/<%=panier[i].nameProduct%>.gif" class="illu_ventes">
+                    <h3><%=panier[i].nameProduct%></h3>
+                    <p><%=panier[i].price%>€</p>
+                </li>
+                <% } %>
+            </ul>
+            
+        </main>
+        <footer>
+            &copy; = Crtnsj
+        </footer>
+    </body>
+</html>

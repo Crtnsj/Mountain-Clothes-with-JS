@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #CEECF2;
+    box-sizing: border-box;
+  }
+  
+  main {
+    flex-grow: 1;
+  }
+  
+  h1 {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Shantell Sans", cursive;
+  }
+  
+  p {
+    font-family: "Shantell Sans";
+  }
+  
+  a {
+    font-family: "Shantell Sans";
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  h2 {
+    font-family: "Shantell Sans";
+  }
+  
+  input {
+    font-family: "Shantell Sans";
+  }
+  
+  label {
+    font-family: "Shantell Sans";
+  }
+  
+  button {
+    font-family: "Shantell Sans";
+  }
+  
+  footer {
+    text-align: center;
+    color: #ffffff;
+    background-color: #273859;
+    margin-top: 2rem;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    text-align: center;
+    background-color: #273859;
+    margin-bottom: 1rem;
+  }
+  
+  .nav {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    background-color: #6593A6;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25em;
+    border-radius: 0.5rem;
+    box-shadow: 3px -3px 5px #000000;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  }
+  .nav__logo {
+    width: 6rem;
+    height: 6rem;
+  }
+  .nav__logo--marque {
+    background-image: url(/img/logo_det.png);
+    background-size: cover;
+    padding-right: 6rem;
+  }
+  .nav__logo--connexion {
+    background-image: url(/img/Connexion.png);
+    background-size: cover;
+    padding-left: 6rem;
+  }
+  .nav__ul {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+  }
+  .nav__menuhamb {
+    display: none;
+  }
+  
+  .navlink {
+    background-color: #c6d7de;
+    text-decoration: none;
+    box-shadow: 3px -3px 5px #000000;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+  }
+  .navlink a {
+    display: block;
+    width: 9.5rem;
+  }
+  .navlink a:hover {
+    color: #ffffff;
+    transition: 0.1s;
+  }
+  .navlink:hover {
+    background-color: #273859;
+    transition: 0.1s;
+  }
+  
+  @media screen and (max-width: 750px) {
+    .nav__menuhamb {
+      display: block;
+    }
+    .navlink {
+      display: none;
+    }
+  }
+
+  
