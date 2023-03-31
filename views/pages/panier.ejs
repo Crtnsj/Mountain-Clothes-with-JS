@@ -8,7 +8,7 @@
     <title>Mountain Clothes</title>
 
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/style_panier.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
@@ -16,10 +16,11 @@
     <body>
         <header>
             <h1>
-                Mountain Clothes
+                    Mountain Clothes
             </h1>
+            
             <nav class="nav">
-                <img src="images/menuhamb.png" class="nav__menuhamb">   
+                <img src="img/menuhamb.png" class="nav__menuhamb">   
                 <a href="/" class="nav__logo nav__logo--marque"></a>
                 <h2 class="nav__menuhamb">Bienvenue !</h2>
                     <ul class="nav__ul">
@@ -27,21 +28,46 @@
                         <li class="navlink"><a href="html/Hommes.html">Hommes</a></li>
                         <li class="navlink"><a href="html/Femmes.html">Femmes</a></li>
                         <li class="navlink"><a href="html/Nouveautés.html">Nouveautés</a></li>
-                        <li class="navlink"><a href="html/Notre_esprit.html">Notre esprit</a></li>
+                        <li class="navlink"><a href="/panier">Panier</a></li>
                     </ul>
-            <a href="/html/Connexion.js" class="nav__logo nav__logo--connexion"></a>
+            <a href="/connexion" class="nav__logo nav__logo--connexion"></a>
             </nav>
         </header>
         <main>
             <ul class="articles">
+                <%let totalpanier = 0;%>
+                <!-- initialisation à 0 de la variable totalpanier afin d'aditionner les prix des articles par la suite -->
                 <% for (let i = 0; i<panier.length; i++) {%>
-                <li class="card">
+                    <!-- creation de la boucle qui affichera les articles de la table panier  -->
+                <li class="card" id="<%=panier[i].id%>">
                     <img src="../img/<%=panier[i].nameProduct%>.gif" class="illu_ventes">
+                    <!-- recupération d'une illustration grace au nom du produit (l'illustration est nommée pareil)  -->
                     <h3><%=panier[i].nameProduct%></h3>
+                    <!-- recupération du nom du produit  -->
                     <p><%=panier[i].price%>€</p>
+                    <!-- recupération du prix  -->
+
+                    <form action="/panier" method="post">
+                        <input type="hidden" name="id" value="<%=panier[i].id%>"/>
+                        <input type="submit" value="Supprimer du panier"/>
+                    </form>
+                    <!-- bouton qui va servir à la suppression de l'article selectionné grace au ciblage de l'id -->
+
                 </li>
+                <%totalpanier += panier[i].price;%>
+                <!-- addition du prix de l'article à totalpanier -->
                 <% } %>
+
             </ul>
+                <% if (panier.length > 0) {%>
+                <p>Le total est de <%=totalpanier%>€</p>
+                <a href="/purgeOK">Vider totalement le panier</a>
+                <% } else { %>
+                <h2>Panier vide, retournez sur la boutique pour ajoutez des articles !</h2>
+                <% } %>
+                <!-- ce bloc veut dire: si il y a des articles dans la table panier alors affiche "vider le panier" et le total
+                à l'aide de la variable "totalpanier"  sinon affiche "panier vide..."-->
+
             
         </main>
         <footer>

@@ -46,16 +46,23 @@
             <h2 class="font1">Meilleures ventes</h2>
             <ul class="articles">
                 <% for (let i = 0; i<products.length; i++) {%>
-                <li class="card">
+                    <!-- creation de la boucle qui affichera les articles de la table orders  -->
+                <li class="card" id="<%=products[i].id%>">
+                    <!-- l'atribution d'un id est important pour la redirection de la requête POST  -->
                     <img src="../img/<%=products[i].item_name%>.gif" class="illu_ventes">
+                    <!-- recupération d'une illustration grace au nom du produit (l'illustration est nommée pareil)  -->
                     <h3><%=products[i].item_name%></h3>
+                    <!-- recupération du nom du produit  -->
                     <p><%=products[i].price%>€</p>
-                    <form action="/" method="post">
+                    <!-- recupération du prix  -->
+                    <form action="/#<%=products[i].id%>" method="post">
                         <input type="hidden" name="idProduct" value="<%=products[i].id%>"/>
                         <input type="hidden" name="nameProduct" value="<%=products[i].item_name%>"/>
                         <input type="hidden" name="price" value="<%=products[i].price%>"/>
-                        <input type="submit" value="Ajouter au panier"/>
+                        <input type="submit" value="Ajouter au panier" class="card__btn"/>
                     </form>
+                    <!-- bouton qui permet d'ajouter l'article selectionné au panier, il récupere l'id de produit, le nom, le prix  -->
+                    <!-- ce bouton renvoie au produit selectionner grace à l'id de la card définit au dessus  -->
                 </li>
                 <% } %>
             </ul>
@@ -65,5 +72,6 @@
     <footer>
         &copy; = Crtnsj
     </footer>
+    
 </body>
 </html>

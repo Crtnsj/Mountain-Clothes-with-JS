@@ -43,6 +43,13 @@
   top: -30px;
   pointer-events: none;
 }
+.loginbox__createacc{
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  font-size: 0.75rem;
+  margin:-1rem 0 -2rem 0;
+}
 .loginbox__input:focus + .loginbox__label, .loginbox__input:valid + .loginbox__label {
   transform: translateY(-15px);
   transition: 0.25s;
