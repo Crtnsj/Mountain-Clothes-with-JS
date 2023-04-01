@@ -3,7 +3,7 @@
   justify-content: center;
   padding-top: 5%;
   padding-bottom: 5%;
-  background-image: url(../img/backloginbox.png);
+  background-image: url(../images/backloginbox.png);
   background-position: center bottom;
   height: 50%;
   border: 2px solid #273859;
@@ -38,17 +38,17 @@
   border-bottom: 1px solid black;
   width: 100%;
 }
-.loginbox__label {
-  position: relative;
-  top: -30px;
-  pointer-events: none;
-}
-.loginbox__createacc{
+.loginbox__createacc {
   display: flex;
   justify-content: right;
   width: 100%;
   font-size: 0.75rem;
-  margin:-1rem 0 -2rem 0;
+  margin: -1rem 0 -2rem 0;
+}
+.loginbox__label {
+  position: relative;
+  top: -30px;
+  pointer-events: none;
 }
 .loginbox__input:focus + .loginbox__label, .loginbox__input:valid + .loginbox__label {
   transform: translateY(-15px);
@@ -146,4 +146,4 @@
   }
 }
 
-
+/*# sourceMappingURL=style_connexion.css.map */

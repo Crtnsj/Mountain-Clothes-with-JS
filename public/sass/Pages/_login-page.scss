@@ -1,0 +1,148 @@
+.backloginbox{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: url(../images/backloginbox.png);
+    background-position: center bottom;
+    height: 50%;
+    border: 2px solid $third-color;
+}
+.loginbox{
+    display: flex;
+    background-color: $color-login-box;
+    flex-direction: column;
+    gap:1.10rem;
+    border-radius: 0.5rem;
+    padding: 40px;
+    align-items: flex-start;
+    box-shadow: 3px -3px 5px #000000;
+    max-width: 45%;
+    &__titre{
+        display: flex ;
+        margin: 0 0 30px;
+        color: #000000;
+        justify-content: center;
+        width: 100%;
+      }
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    &__input{
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid black;
+        width: 100%; 
+    }
+    &__createacc{
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        font-size: 0.75rem;
+        margin:-1rem 0 -2rem 0;
+    }
+    &__label{
+        position: relative;
+        top: -30px;
+        pointer-events: none;
+    }
+    &__input:focus + &__label, &__input:valid + &__label{
+        transform: translateY(-15px);
+        transition : .25s;
+        color: $third-color;
+        font-size: 0.75rem;
+    }
+    
+}
+.btn_submit {
+
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10%;
+    font-size: 1.10rem;
+    background-color: transparent;
+    overflow: hidden;
+    border: 1px solid $third-color;
+    letter-spacing: 0.25rem;
+    &:hover {
+        background-color: $third-color;
+        transition: 0.25s;
+        color: $second-color;
+    }
+    & span{
+        position: relative;
+        display: block;
+        // border: 1px solid white;
+        &:nth-child(1){
+            top: 25%;
+            right: 111%;
+            width: 100%;
+            height: 2px;
+            animation: span1 4s ease-in infinite;
+            background: linear-gradient(90deg, transparent, #CEECF2);
+        }
+        
+        &:nth-child(2){
+            top: 25%;
+            right: -105%;
+            width: 2px;
+            height: 100%;
+            animation: span2 4s ease-in infinite;
+            animation-delay: 1s;
+            background: linear-gradient(360deg, transparent, #CEECF2);
+        }
+        &:nth-child(3){
+            top: -208%;
+            right: -111%;
+            width: 100%;
+            height: 2px;
+            animation: span3 4s ease-in infinite;
+            animation-delay: 2s;
+            background: linear-gradient(270deg, transparent, #CEECF2);
+        }
+        &:nth-child(4){
+            top: -315%;
+            right: 7%;
+            width: 2px;
+            height: 100%;
+            animation: span4 4s ease-in infinite;
+            animation-delay: 3s;
+            background: linear-gradient(180deg, transparent, #CEECF2);
+        }
+    }
+}
+@keyframes span1{
+    0%{
+        right: 111%;
+    }
+    50%,100%{
+        right: -108%;
+    }
+}
+@keyframes span2{
+    0%{
+        top: 30%;
+    }
+    50%,100%{
+        top: -200%;
+    }
+}
+@keyframes span3{
+    0%{
+        right: -117%;
+    }
+    50%,100% {
+        right: 111%;
+    }
+}
+@keyframes span4{
+    0%{
+        top: -315%;
+    }
+    50%,100%{
+        top: -100%;
+    }
+}

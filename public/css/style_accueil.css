@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .mountains {
   display: flex;
-  background-image: url(../img/mountains.png);
+  background-image: url(../images/mountains.png);
   background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@
 
 .illunouv {
   display: flex;
-  background-image: url(../img/Nouveautés.png);
+  background-image: url(../images/Nouveautés.png);
   background-size: cover;
   background-position: top;
   width: 50%;
@@ -30,34 +30,5 @@
   border-radius: 0.25rem;
   box-shadow: 2px -2px 3px #000000;
 }
-.meillvente h2{
-  background-color:#273859;
-  color: #ffffff;
-  margin-top: 2rem;
-  justify-content: center;
-  border-radius:  0.5rem;
-  text-align: center;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  margin: 0 10rem 3rem 10rem;
-}
-.articles{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
-.card{
-  background-color: #6593A6;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.illu_ventes{
-  width: 12rem;
-}
 
+/*# sourceMappingURL=style_accueil.css.map */

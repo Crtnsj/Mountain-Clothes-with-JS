@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html, body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:#CEECF2;
+    box-sizing: border-box;
+}
+main{
+    flex-grow: 1;
+}
+h1 {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Shantell Sans', cursive;
+}
+
+p{
+    font-family: 'Shantell Sans';
+}
+
+a{
+    font-family: 'Shantell Sans';
+    text-decoration: none;
+    color: #000000;
+}
+
+h2{
+    font-family: 'Shantell Sans';
+}
+
+input{ 
+    font-family: 'Shantell Sans';
+}
+
+label{
+    font-family: 'Shantell Sans';
+}
+button{
+    font-family: 'Shantell Sans';
+}
+footer {
+    text-align: center;
+    color: #ffffff;
+    background-color: #273859;
+    margin-top: 2rem;
+}

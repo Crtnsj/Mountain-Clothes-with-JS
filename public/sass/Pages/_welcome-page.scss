@@ -1,0 +1,31 @@
+.mountains{
+    display: flex;
+    background-image: url(../images/mountains.png);
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    height: 375px; 
+}
+.illunouv{
+    display: flex;
+    background-image: url(../images/Nouveautés.png);
+    background-size: cover;
+    background-position: top;
+    width: 50% ;
+    height: 47%;
+    border-radius: 0.5rem;
+    box-shadow: 3px -3px 5px #000000;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0.25rem;
+    &__but{
+        background-color: #273859;
+        padding: 0.30rem;
+        color: #FFFFFF;
+        border-radius: 0.25rem;
+        box-shadow: 2px -2px 3px #000000;
+    }
+        
+}

@@ -1,0 +1,76 @@
+header{
+    display: flex;
+    flex-direction: column;
+    h1{
+        text-align: center;
+        background-color: #273859;
+        margin-bottom: 1rem;
+    }
+    margin-bottom: 2rem;
+}
+.nav {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    background-color: $primary-color;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25em;
+    border-radius: 0.5rem;
+    box-shadow: 3px -3px 5px #000000;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    &__logo{
+        width: 6rem;
+        height: 6rem;
+        &--marque{
+            background-image: url(/PROJET_DEV/images/logo_det.png);
+            background-size: cover;
+            padding-right: 6rem;
+        }
+        &--connexion{
+            background-image: url(/PROJET_DEV/images/Connexion.png);
+            background-size: cover;
+            padding-left: 6rem;
+        }
+    }
+    &__ul{
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        align-items: center;
+    }
+    &__menuhamb{
+        display: none;
+    }
+}
+.navlink{
+    background-color: $second-color;
+    text-decoration: none;
+    box-shadow: 3px -3px 5px #000000;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 0.25rem;
+    font-size: 1.50rem;
+    & a{
+        display: block;
+        width: 9.5rem;
+    }
+    & a:hover{
+        color: #ffffff;
+        transition: .10s;
+    }
+    &:hover{
+        background-color: #273859;
+        transition: .10s;
+    }
+}
+@media screen and (max-width: 750px) {
+    .nav__menuhamb{
+        display: block;
+    }
+    .navlink{
+        display: none;
+    }
+}
