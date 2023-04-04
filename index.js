@@ -25,7 +25,7 @@ app.get('/', function(req, res){
 
 });//Récupération des données de la table orders pour les proposer à l'index à l'aide de la variable "products"
 
-app.get('/connexion', function(req, res){
+app.get('/user/auth', function(req, res){
         res.render('pages/connexion')
 });//accès à la page connexion
 
@@ -61,7 +61,7 @@ app.get('/signup', function(req,res,next){
     res.render('pages/signup');
 });
 
-app.post('/page_user', function(req, res, next) {
+app.post('/signup', function(req, res, next) {
     let coderr = 0b0000;
     let data = req.body;
     const age = parseInt(data.age);
@@ -91,5 +91,5 @@ app.post('/page_user', function(req, res, next) {
       });
     }
   })
-
-app.listen(3000);//définition du port d'écoute
+app.get('ownpage')
+app.listen(3000);//définition du port d'écou
