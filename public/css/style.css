@@ -83,12 +83,12 @@ header h1 {
   height: 6rem;
 }
 .nav__logo--marque {
-  background-image: url(/PROJET_DEV/images/logo_det.png);
+  background-image: url(/img/logo_det.png);
   background-size: cover;
   padding-right: 6rem;
 }
 .nav__logo--connexion {
-  background-image: url(/PROJET_DEV/images/Connexion.png);
+  background-image: url(/img/Connexion.png);
   background-size: cover;
   padding-left: 6rem;
 }

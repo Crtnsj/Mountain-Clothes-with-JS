@@ -57,15 +57,39 @@ app.get('/purgeOK', function(req,res,next){
     res.render('pages/purgeOK')
 });//requete de purge de la table `panier` et redirection vers la page "purgeOK"
 
-app.get('/create_account', function(req,res,next){
-    res.render('pages/create_account');
+app.get('/signup', function(req,res,next){
+    res.render('pages/signup');
 });
 
-app.post('/page_user', function(req,res,next){
+app.post('/page_user', function(req, res, next) {
+    let coderr = 0b0000;
     let data = req.body;
-    console.log(data);
-    res.render('/page_user')
-})
+    const age = parseInt(data.age);
+    if (age < 18) {
+      coderr = 0b0001;
+      res.render('pages/acces_denied', { coderr: coderr });
+    }
+    connection.query('SELECT email FROM users', (err, result, fields) => {
+      for (let i = 0; i < result.length; i++) {
+        if (result[i].email == data.email) {
+          coderr = 0b0010;
+          res.render('pages/acces_denied', { coderr: coderr });
+        };
+      };
+    });
+    let password = data.pswd
+    if (password.length<8){
+      coderr = 0b1000;
+      res.render('pages/acces_denied', { coderr: coderr });
+    }
+    if (coderr !== 0b0000){
+      res.render('pages/acces_denied', { coderr: coderr });
+    }else{
+      connection.query(`INSERT INTO users (id, email, age, lastname, firstname, password) VALUES (NULL, '${data.email}', '${data.age}', '${data.lastname}', '${data.firstname}', '${data.pswd}');`,(err, result, fields) => {});
+      connection.query(`SELECT * FROM users WHERE users.firstname = '${data.firstname}'`,(err, result, fields)=> {
+        res.render('pages/page_user', {user:result[0].firstname} )
+      });
+    }
+  })
 
-
-app.listen(3000);//définition du port d'écoute 
+app.listen(3000);//définition du port d'écoute

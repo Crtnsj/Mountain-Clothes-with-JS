@@ -8,7 +8,7 @@
     <title>Mountain Clothes</title>
 
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="css/style_create_account.css">
+    <link rel="stylesheet" href="css/style_page_perso.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
@@ -35,6 +35,18 @@
         </nav>
     </header>
     <main>
+        <h2>accès refusé</h2>
+        <p>code erreur = <%= coderr %></p>
+        <% if (coderr === 0b0001) { %>
+            <p>Il faut être majeur pour créer un compte</p>
+          <% } else if (coderr === 0b0010) { %>
+            <p>Compte déjà existant sous cette adresse email</p>
+          <% }  else if (coderr === 0b0100) { %>
+            <p>Cet username est déjà utilisé</p>
+          <% } else if (coderr === 0b1000) { %>
+            <p>Mot de passe trop cours</p>
+          <% } %>
+        <a href="/signup">Retourner à la page d'inscription</a>
     </main>
     <footer>
         &copy; = Crtnsj

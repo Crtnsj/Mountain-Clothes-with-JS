@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "sass": "sass --watch ./public/sass/main.scss:./public/css/style.css ./public/sass/connexion.scss:./public/css/style_connexion.css ./public/sass/accueil.scss:./public/css/style_accueil.css ./public/sass/panier.scss:./public/css/style_panier.css", 
+    "sass": "sass --watch ./public/sass/main.scss:./public/css/style.css ./public/sass/connexion.scss:./public/css/style_connexion.css ./public/sass/accueil.scss:./public/css/style_accueil.css ./public/sass/panier.scss:./public/css/style_panier.css ./public/sass/signup.scss:./public/css/style_signup.css", 
     "start": "concurrently \"npm run sass\" \"npm run dev\""
   },
   "author": "",

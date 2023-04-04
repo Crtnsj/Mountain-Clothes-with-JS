@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Clothes</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style_signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>
+                Mountain Clothes
+        </h1>
+        
+        <nav class="nav">
+            <img src="img/menuhamb.png" class="nav__menuhamb">   
+            <a href="/" class="nav__logo nav__logo--marque"></a>
+            <h2 class="nav__menuhamb">Bienvenue !</h2>
+                <ul class="nav__ul">
+                    <li class="navlink"><a href="/">Accueil</a></li>
+                    <li class="navlink"><a href="html/Hommes.html">Hommes</a></li>
+                    <li class="navlink"><a href="html/Femmes.html">Femmes</a></li>
+                    <li class="navlink"><a href="html/Nouveautés.html">Nouveautés</a></li>
+                    <li class="navlink"><a href="/panier">Panier</a></li>
+                </ul>
+        <a href="/connexion" class="nav__logo nav__logo--connexion"></a>
+        </nav>
+    </header>
+    <main>
+        <section class="backloginbox">
+                
+            <form action="/page_user" method="post" class="loginbox">
+                
+            <div class="loginbox__titre"> <h2>Rejoignez-nous !</h2></div>
+
+            <div class="loginbox__bloc">
+                <input type="email" name="email" required="" class="loginbox__input">
+                <label class="loginbox__label">Email</label>
+            </div>
+            <div class="loginbox__bloc">
+                <input type="number" name="age" required="" class="loginbox__input">
+                <label class="loginbox__label">Age</label>
+            </div>
+            <div class="loginbox__bloc">
+                <input type="text" name="lastname" required="" class="loginbox__input">
+                <label class="loginbox__label">Nom</label>
+            </div>
+            <div class="loginbox__bloc">
+                <input type="text" name="firstname" required="" class="loginbox__input">
+                <label class="loginbox__label">Prénom</label>
+            </div>
+            <div class="loginbox__bloc">
+                <input type="password" name="pswd" required="" class="loginbox__input">
+                <label class="loginbox__label">Mot de passe</label>
+            </div>
+
+            <button type="submit" class="btn_submit">
+                Inscription
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; = Crtnsj
+    </footer>
+</body>
+</html>
