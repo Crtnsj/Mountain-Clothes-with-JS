@@ -28,7 +28,7 @@
                 <li class="navlink"><a href="html/Hommes.html">Hommes</a></li>
                 <li class="navlink"><a href="html/Femmes.html">Femmes</a></li>
                 <li class="navlink"><a href="html/Nouveautés.html">Nouveautés</a></li>
-                <li class="navlink"><a href="/panier">Panier</a></li>
+                <li class="navlink"><a href="/cart">Panier</a></li>
             </ul>
             <a href="/user/auth" class="nav__logo nav__logo--connexion"></a>
         </nav>
@@ -36,13 +36,13 @@
     <main>
         <section class="backloginbox">
              
-            <form action="/page_user" method="post" class="loginbox">
+            <form action="/user/auth" method="post" class="loginbox">
                  
             <div class="loginbox__titre"> <h2>Connexion</h2></div>
 
             <div class="loginbox__bloc">
-                <input type="text" name="user" required="" class="loginbox__input">
-                <label class="loginbox__label">Utilisateur</label>
+                <input type="text" name="email" required="" class="loginbox__input">
+                <label class="loginbox__label">Email</label>
             </div>
 
             <div class="loginbox__bloc">
@@ -50,7 +50,7 @@
                 <label class="loginbox__label">Mot de passe</label>
             </div>
             <div class="loginbox__createacc">
-                <a href="/signup">Pas de compte ? Créez-en un !</a>
+                <a href="/user/signup">Pas de compte ? Créez-en un !</a>
             </div>
             <button type="submit" class="btn_submit">
                 SOUMETTRE

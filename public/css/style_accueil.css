@@ -54,6 +54,7 @@
 .card {
   background-color: #6593A6;
   padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 .card__illu {
   width: 15rem;

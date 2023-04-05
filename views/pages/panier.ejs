@@ -28,7 +28,7 @@
                     <li class="navlink"><a href="html/Hommes.html">Hommes</a></li>
                     <li class="navlink"><a href="html/Femmes.html">Femmes</a></li>
                     <li class="navlink"><a href="html/Nouveautés.html">Nouveautés</a></li>
-                    <li class="navlink"><a href="/panier">Panier</a></li>
+                    <li class="navlink"><a href="/cart">Panier</a></li>
                 </ul>
                 <a href="/user/auth" class="nav__logo nav__logo--connexion"></a>
             </nav>
@@ -47,7 +47,7 @@
                     <p><%=panier[i].price%>€</p>
                     <!-- recupération du prix  -->
 
-                    <form action="/panier" method="post">
+                    <form action="/cart" method="post">
                         <input type="hidden" name="id" value="<%=panier[i].id%>"/>
                         <input type="submit" value="Supprimer du panier"/>
                     </form>
@@ -61,7 +61,7 @@
             </ul>
                 <% if (panier.length > 0) {%>
                 <p>Le total est de <%=totalpanier%>€</p>
-                <a href="/purgeOK">Vider totalement le panier</a>
+                <a href="/cart/purgeOK">Vider totalement le panier</a>
                 <% } else { %>
                 <h2>Panier vide, retournez sur la boutique pour ajoutez des articles !</h2>
                 <% } %>

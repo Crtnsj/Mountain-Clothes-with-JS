@@ -29,7 +29,7 @@
               <li class="navlink"><a href="html/Hommes.html">Hommes</a></li>
               <li class="navlink"><a href="html/Femmes.html">Femmes</a></li>
               <li class="navlink"><a href="html/Nouveautés.html">Nouveautés</a></li>
-              <li class="navlink"><a href="/panier">Panier</a></li>
+              <li class="navlink"><a href="/cart">Panier</a></li>
           </ul>
           <a href="/user/auth" class="nav__logo nav__logo--connexion"></a>
       </nav>
@@ -40,13 +40,13 @@
         <% if (coderr === 0b0001) { %>
             <p>Il faut être majeur pour créer un compte</p>
           <% } else if (coderr === 0b0010) { %>
-            <p>Compte déjà existant sous cette adresse email</p>
+            <p>Compte déjà existant sous cette adresse email ou email incorrect</p>
           <% }  else if (coderr === 0b0100) { %>
             <p>Cet username est déjà utilisé</p>
           <% } else if (coderr === 0b1000) { %>
             <p>Mot de passe trop cours</p>
           <% } %>
-        <a href="/signup">Retourner à la page d'inscription</a>
+        <a href="/user/signup">Retourner à la page d'inscription</a>
     </main>
     <footer>
         &copy; = Crtnsj

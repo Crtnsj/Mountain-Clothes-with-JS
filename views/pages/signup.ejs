@@ -8,7 +8,7 @@
     <title>Mountain Clothes</title>
 
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="css/style_signup.css">
+    <link rel="stylesheet" href="../css/style_signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
                 <li class="navlink"><a href="html/Hommes.html">Hommes</a></li>
                 <li class="navlink"><a href="html/Femmes.html">Femmes</a></li>
                 <li class="navlink"><a href="html/Nouveautés.html">Nouveautés</a></li>
-                <li class="navlink"><a href="/panier">Panier</a></li>
+                <li class="navlink"><a href="/cart">Panier</a></li>
             </ul>
             <a href="/user/auth" class="nav__logo nav__logo--connexion"></a>
         </nav>
@@ -37,12 +37,12 @@
     <main>
         <section class="backloginbox">
                 
-            <form action="/signup" method="post" class="loginbox">
+            <form action="/user/signup" method="post" class="loginbox">
                 
             <div class="loginbox__titre"> <h2>Rejoignez-nous !</h2></div>
 
             <div class="loginbox__bloc">
-                <input type="email" name="email" required="" class="loginbox__input">
+                <input type="text" name="email" required="" class="loginbox__input">
                 <label class="loginbox__label">Email</label>
             </div>
             <div class="loginbox__bloc">

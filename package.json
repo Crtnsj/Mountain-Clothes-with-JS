@@ -6,12 +6,13 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "sass": "sass --watch ./public/sass/main.scss:./public/css/style.css ./public/sass/connexion.scss:./public/css/style_connexion.css ./public/sass/accueil.scss:./public/css/style_accueil.css ./public/sass/panier.scss:./public/css/style_panier.css ./public/sass/signup.scss:./public/css/style_signup.css", 
+    "sass": "sass --watch ./public/sass/main.scss:./public/css/style.css ./public/sass/connexion.scss:./public/css/style_connexion.css ./public/sass/accueil.scss:./public/css/style_accueil.css ./public/sass/panier.scss:./public/css/style_panier.css ./public/sass/signup.scss:./public/css/style_signup.css",
     "start": "concurrently \"npm run sass\" \"npm run dev\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
