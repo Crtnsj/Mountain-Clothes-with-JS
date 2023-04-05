@@ -44,9 +44,15 @@
           <% }  else if (coderr === 0b0100) { %>
             <p>Cet username est déjà utilisé</p>
           <% } else if (coderr === 0b1000) { %>
-            <p>Mot de passe trop cours</p>
+            <p>Mot de passe trop court</p>
+          <% } else if (coderr === 0b1111) { %>
+            <p>Combinaison email/mot de passe incorrect</p>
           <% } %>
+        <% if (coderr>0b1000){%>
+        <a href="/user/auth">Retourner à la page de connexion</a>
+        <% } else { %>
         <a href="/user/signup">Retourner à la page d'inscription</a>
+        <% } %>
     </main>
     <footer>
         &copy; = Crtnsj
