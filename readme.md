@@ -87,7 +87,7 @@ Si une nouvelle feuille de style veut être ajoutée, il faut modifier le script
 Les pages HTML sont créées avec les différents fichiers EJS. L'ajout de page se réalise donc en créant un fichier EJS et en utilisant la gestion de route proposée par Express. Les routes de l'application sont organisées en fonction de leurs utilités, les routes concernant le panier commencent par : "/cart/" et celles pour la partie utilisateur par : "/user/". 
 
 //Logique de nommage des routes
-![[Logique_de_route.png]]
+![Logique de nommage des routes](./public/img/Logique_de_route.png)
 
 ### Ajout d'article :
 
@@ -100,7 +100,7 @@ L'unique contributeur de ce projet est Corentin SANJUAN
 # Annexes :
 
 //V1 du schéma pour les règles de sécurité lors de la création de compte (plus à jour) 
-![[Regles_de_securite.png]]
+![V1 du schéma pour les règles de sécurité lors de la création de compte (plus à jour)](./public/img/Regles_de_securite.png)
 
 //V1 du schéma pour la partie "user" de l'application (plus à jour)
-![[Partie_user.png]]
+![V1 du schéma pour la partie "user" de l'application (plus à jour)](./public/img/Partie_user.png)
