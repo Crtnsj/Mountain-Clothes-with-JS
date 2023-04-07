@@ -92,7 +92,11 @@ router.post('/signup', function(req, res, next) {
     //si le mot de passe du formulaire contient moins de 8 caractères alors "coderr" = 8 et rendre la page "acces_denied" avec l'objet "coderr" qui correspond à "coderr"
     coderr = 0b1000;
     res.render('pages/acces_denied', { coderr: coderr });
-  } else {
+  }else if (data.pswd.length > 20) {
+    //Sinon si le mot de passe du formulaire contient plus de 20 caractères alors "coderr" = 8 et rendre la page "acces_denied" avec l'objet "coderr" qui correspond à "coderr"
+    coderr = 0b1000;
+    res.render('pages/acces_denied', { coderr: coderr });
+  }else {
     //sinon...
     bcrypt.hash(data.pswd, 10)
     //utiliser l'algorithme "bcrypt 10 fois sur le mot de passe afin de créer un hash
